@@ -4,6 +4,12 @@ module.exports = {
     description: `My personal blog and portfolio.`,
     author: `@iannsantos`,
     position: `Software Developer`,
+    social: {
+      twitter: 'http://twitter.com/iannsantos',
+      instagram: 'http://instagram.com/iannsantos',
+      github: 'http://github.com/iannsantos',
+      linkedin: 'http://linkedin.com/in/iannsantos',
+    },
   },
   plugins: [
     {
