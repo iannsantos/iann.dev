@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { borderColor } from '../styles/constants'
+import { borderColor, secondaryColor } from '../../styles/constants'
 
 export const Container = styled.div`
   display: flex;
@@ -7,24 +7,25 @@ export const Container = styled.div`
   align-items: center;
 `
 
-export const Bio = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  /* margin-bottom: 8px; */
-`
-
-export const BioText = styled.p`
-  color: #fff;
-  text-align: left;
-  margin: 0 0 0 8px;
-`
-export const LatestPosts = styled.div`
-  > p {
+export const Search = styled.div`
+  input {
+    border: 1.5px solid ${borderColor};
+    background: transparent;
+    margin-bottom: 16px;
+    padding: 8px;
+    font-size: 18px;
     color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 16px 0;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 8px;
+    background: transparent;
+    border: 1.5px solid ${borderColor};
+  }
+
+  button:hover {
+    border: 1.5px solid ${secondaryColor};
   }
 `
 
@@ -53,7 +54,6 @@ export const Post = styled.div`
     font-size: 14px;
   }
 `
-
 export const Tag = styled.span`
   display: flex;
   align-items: flex-end;
