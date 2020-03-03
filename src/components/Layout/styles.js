@@ -1,14 +1,14 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const LayoutWrapper = styled.div`
-  /* display: flex; */
+  display: flex;
   background: #16202c;
-  /* width: 100vh; */
 `
 
 export const LayoutMain = styled.main`
   /* background: #16202c; */
   min-height: 100vh;
-  /* padding: 0 18rem 0 18rem; */
-  /* width: 100vh; */
+  /* min-width: 100vh; */
+  padding: 0 20rem;
+  width: 100%;
 `
