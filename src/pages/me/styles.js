@@ -1,17 +1,22 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 16px;
+  }
 `
 
-export const About = styled.div`
+export const About = styled.section`
+  margin-bottom: 48px;
   p {
     color: rgba(255, 255, 255, 0.7);
-    /* padding: 0 2rem; */
     text-align: justify;
     font-size: 1.4rem;
   }
 `
-export const SocialLinks = styled.div``

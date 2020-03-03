@@ -1,8 +1,9 @@
-import React from "react"
-import Avatar from "../../components/Avatar"
-import Layout from "../../components/Layout"
-import SEO from "../../components/seo"
-import { About, Container } from "./styles"
+import React from 'react'
+import Avatar from '../../components/Avatar'
+import Layout from '../../components/Layout'
+import SEO from '../../components/seo'
+import SocialLinks from '../../components/SocialLinks'
+import { About, Container } from './styles'
 
 export default function MePage() {
   return (
@@ -11,35 +12,33 @@ export default function MePage() {
       <Container>
         <div>
           <Avatar />
+          <SocialLinks />
         </div>
-        {/* <SocialLinks>
-          <p>LinkedIn</p>
-          <p>Github</p>
-          <p>Instagram</p>
-        </SocialLinks> */}
+
         <About>
           <p>
-            Me chamo Iann Santos, apaixonado por tecnologia desde criança.
-            Comecei a me aventurar "fuçando" valores de jogos no Android com
-            root no celular hahaha.
+            Fala guys, muito prazer ter vocês aqui! Meu nome é Iann Santos e
+            atualmente trabalho como Software Developer na PDV365. É o meu
+            primeiro trampo como desenvolvedor e está sendo um grande
+            aprendizado! Lá usamos a stack de Javascript (Node, React e React
+            Native).
           </p>
           <br />
           <p>
-            Atualmente trabalho como Software Developer na PDV365 onde atuo com
-            a stack de Javascript usando React.js, React Native e Node.js
+            Criei esse blog/portifólio para poder compartilhar os meus
+            estudos/aprendizados e ao mesmo tempo conseguir contribuir com a
+            comunidade de desenvolvimento de alguma forma (espero conseguir
+            kkkk). Estou estudando inglês também, então se virem algum erro por
+            aí, me ajudem hahaha.
           </p>
           <br />
           <p>
-            Estou sempre estudando para conhecer novas tecnologias e aprimorar
-            meus conhecimentos.
+            Sou apaixonado por tecnologia em geral (sério, tudo), mas
+            especialmente em códigos. Curto demais sair pra beber e curtir com
+            minha namorada e amigos, e assisto séries e filmes de vez em quando.
           </p>
           <br />
-          <p>
-            Fiz este site pessoal para poder compartilhar os meus estudos e
-            ainda conseguir ajudar alguém com isso. Também para mostrar o meu
-            portifólio com alguns projetos que já fiz, sejam eles por estudo ou
-            por trabalho.
-          </p>
+          <p>Enfim... esse sou eu!</p>
         </About>
       </Container>
     </Layout>

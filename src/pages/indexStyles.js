@@ -11,7 +11,7 @@ export const Bio = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 `
 
 export const BioText = styled.p`

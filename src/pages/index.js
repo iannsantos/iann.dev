@@ -3,6 +3,7 @@ import Icon from 'gatsby-image'
 import React from 'react'
 import Avatar from '../components/Avatar'
 import Layout from '../components/Layout'
+import SEO from '../components/seo'
 import SocialLinks from '../components/SocialLinks'
 import { Bio, BioText, Container, LatestPosts, Post, Tag } from './indexStyles'
 
@@ -21,6 +22,7 @@ export default function IndexPage() {
 
   return (
     <Layout>
+      <SEO title="Home" />
       <Container>
         <Bio>
           <Avatar />
