@@ -38,7 +38,7 @@ export default function MePage() {
             minha namorada e amigos, e assisto séries e filmes de vez em quando.
           </p>
           <br />
-          <p>Enfim... esse sou eu!</p>
+          <p>Enfim... abraços!</p>
         </About>
       </Container>
     </Layout>

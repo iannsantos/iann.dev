@@ -1,25 +1,12 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import Icon from 'gatsby-image'
 import React from 'react'
 import Avatar from '../components/Avatar'
 import Layout from '../components/Layout'
+import Post from '../components/Post'
 import SEO from '../components/seo'
 import SocialLinks from '../components/SocialLinks'
-import { Bio, BioText, Container, LatestPosts, Post, Tag } from './indexStyles'
+import { Bio, BioText, Container, LatestPosts } from './indexStyles'
 
 export default function IndexPage() {
-  const { tag } = useStaticQuery(graphql`
-    query {
-      tag: file(relativePath: { eq: "tag.png" }) {
-        childImageSharp {
-          fixed(width: 15, height: 15) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
       <SEO title="Home" />
@@ -35,21 +22,14 @@ export default function IndexPage() {
         <SocialLinks />
         <LatestPosts>
           <p>latest posts...</p>
-          <Post>
-            <div>
-              <h1>My first post</h1>
-              <p>01/03/2020</p>
-            </div>
-            <p>
-              This is my first post telling about the experience of create a
-              blog and portfolio with Gatsby and connecting it with a Netlify
-              and your CMS (Netlify CMS). See you in the next post!! Thanks.
-            </p>
-            <Tag>
-              <Icon fixed={tag.childImageSharp.fixed} alt="tag" />
-              <p>gatsby, netlify</p>
-            </Tag>
-          </Post>
+          <Post
+            title="My first post"
+            description="This is my first post telling about the experience of create a blog and
+        portfolio with Gatsby and connecting it with a Netlify and your CMS
+        (Netlify CMS). See you in the next post!! Thanks."
+            date="03/03/2020"
+            tags="gatsby, development"
+          />
         </LatestPosts>
       </Container>
     </Layout>
