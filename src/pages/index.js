@@ -1,10 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
 import Avatar from '../components/Avatar'
 import Layout from '../components/Layout'
 import Post from '../components/Post'
 import SEO from '../components/seo'
 import SocialLinks from '../components/SocialLinks'
-import { Bio, BioText, Container, LatestPosts } from './indexStyles'
 
 export default function IndexPage() {
   return (
@@ -35,3 +35,30 @@ export default function IndexPage() {
     </Layout>
   )
 }
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Bio = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin-bottom: 8px; */
+`
+
+const BioText = styled.p`
+  color: #fff;
+  text-align: left;
+  margin: 0 0 0 8px;
+`
+const LatestPosts = styled.div`
+  > p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 16px 0;
+  }
+`

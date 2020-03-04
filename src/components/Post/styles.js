@@ -6,6 +6,7 @@ export const Container = styled.button`
   margin-bottom: 16px;
   border: 1.5px solid ${borderColor};
   background: transparent;
+  width: 600px;
 
   &:hover {
     border: 1.5px solid ${secondaryColor};
@@ -30,6 +31,7 @@ export const Container = styled.button`
   > p {
     color: #c4c4c4;
     font-size: 14px;
+    text-align: left;
   }
 `
 export const Tag = styled.span`

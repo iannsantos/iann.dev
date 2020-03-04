@@ -1,6 +1,6 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import { Button, Container, Logo } from "./styles"
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+import { Button, Container, Logo } from './styles'
 
 export default function Header() {
   const {

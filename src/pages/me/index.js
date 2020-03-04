@@ -1,9 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
 import Avatar from '../../components/Avatar'
 import Layout from '../../components/Layout'
 import SEO from '../../components/seo'
 import SocialLinks from '../../components/SocialLinks'
-import { About, Container } from './styles'
 
 export default function MePage() {
   return (
@@ -44,3 +44,24 @@ export default function MePage() {
     </Layout>
   )
 }
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 16px;
+  }
+`
+
+const About = styled.section`
+  margin-bottom: 48px;
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: justify;
+    font-size: 1.4rem;
+  }
+`

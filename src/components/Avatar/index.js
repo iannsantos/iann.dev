@@ -1,6 +1,6 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import { Image } from "./styles"
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+import { Image } from './styles'
 
 export default function Avatar() {
   const { avatarImage } = useStaticQuery(graphql`
