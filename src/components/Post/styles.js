@@ -6,29 +6,37 @@ export const Container = styled.button`
   margin-bottom: 16px;
   border: 1.5px solid ${borderColor};
   background: transparent;
-  width: 600px;
+  width: 100%;
 
   &:hover {
     border: 1.5px solid ${secondaryColor};
   }
 
-  > div {
+  & > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* align-items: center; */
 
     h1 {
+      font-size: 24px;
+      font-weight: bold;
       color: #fff;
       margin-bottom: 8px;
+
+      @media screen and (max-width: 800px) {
+        font-weight: bold;
+        font-size: 20px;
+      }
     }
 
-    > p {
+    & > p {
       color: #c4c4c4;
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 
-  > p {
+  p {
     color: #c4c4c4;
     font-size: 14px;
     text-align: left;
@@ -40,9 +48,13 @@ export const Tag = styled.span`
 
   margin-top: 16px;
 
-  > p {
+  & > p {
     color: #c2c2c2;
     font-size: 12px;
     margin: 0 8px;
+  }
+
+  & > span {
+    color: #fff;
   }
 `

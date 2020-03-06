@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import Icon from 'gatsby-image'
 import React from 'react'
-import { Container, SocialButton } from './styles'
+import { Container } from './styles'
 
 export default function SocialLinks() {
   const {
@@ -56,18 +56,34 @@ export default function SocialLinks() {
 
   return (
     <Container>
-      <SocialButton href={links.siteMetadata.social.instagram} target="_blank">
+      <a
+        href={links.siteMetadata.social.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Icon fixed={instagram.childImageSharp.fixed} alt="Instagram" />
-      </SocialButton>
-      <SocialButton href={links.siteMetadata.social.github} target="_blank">
+      </a>
+      <a
+        href={links.siteMetadata.social.github}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Icon fixed={github.childImageSharp.fixed} alt="Github" />
-      </SocialButton>
-      <SocialButton href={links.siteMetadata.social.twitter} target="_blank">
+      </a>
+      <a
+        href={links.siteMetadata.social.twitter}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Icon fixed={twitter.childImageSharp.fixed} alt="Twitter" />
-      </SocialButton>
-      <SocialButton href={links.siteMetadata.social.linkedin} target="_blank">
+      </a>
+      <a
+        href={links.siteMetadata.social.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Icon fixed={linkedin.childImageSharp.fixed} alt="LinkedIn" />
-      </SocialButton>
+      </a>
     </Container>
   )
 }

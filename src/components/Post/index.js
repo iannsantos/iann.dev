@@ -1,21 +1,8 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import Icon from 'gatsby-image'
 import React from 'react'
+import FA from 'react-fontawesome'
 import { Container, Tag } from './styles'
 
 export default function Post({ title, date, description, tags }) {
-  const { tag } = useStaticQuery(graphql`
-    query {
-      tag: file(relativePath: { eq: "tag.png" }) {
-        childImageSharp {
-          fixed(width: 15, height: 15) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Container>
       <div>
@@ -24,7 +11,7 @@ export default function Post({ title, date, description, tags }) {
       </div>
       <p>{description || ''}</p>
       <Tag>
-        <Icon fixed={tag.childImageSharp.fixed} alt="tag" />
+        <FA name="tag" />
         <p>{tags || ''}</p>
       </Tag>
     </Container>

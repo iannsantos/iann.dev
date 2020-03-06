@@ -11,7 +11,8 @@ dev-iann
 <hr />
 
 ## About
-<p>This blog/portfolio isn't ready yet, the content is static, isn't responsive and other issues.</p>
+
+<p>This blog/portfolio isn't ready yet, the content is static and other issues.</p>
 <p>Project in <strong>development</strong></p>
 <p>The demo is on a Netlify <a href="https://deviann.netlify.com/">here</a>.</p>
 
@@ -21,7 +22,9 @@ dev-iann
 - ⚛️ **Gatsby JS** — Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps
 
 ## Getting started
+
 The following getting started was copied from Gatsby [default starter repository](https://github.com/gatsbyjs/gatsby-starter-default)
+
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the default starter.

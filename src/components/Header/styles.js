@@ -1,19 +1,28 @@
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { primaryColor, secondaryColor } from '../../styles/constants'
+import { secondaryColor } from '../../styles/constants'
 
 export const Container = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 0 80px 0;
+
+  margin-bottom: 32px;
 `
 export const Logo = styled(Link)`
   font-family: 'Righteous';
   font-size: 30px;
   font-weight: bold;
-  color: ${primaryColor};
+  color: #fff;
+
+  @media screen and (max-width: 800px) {
+    font-size: 32px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 28px;
+  }
 `
 
 export const Button = styled(Link).attrs({
@@ -24,6 +33,15 @@ export const Button = styled(Link).attrs({
   font-family: 'Righteous';
   font-size: 18px;
   font-weight: bold;
-  color: ${primaryColor};
-  margin: 0 0 0 16px;
+  color: #fff;
+  margin-left: 16px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+    margin-left: 8px;
+  }
 `
