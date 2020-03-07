@@ -1,12 +1,16 @@
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { borderColor, secondaryColor } from '../../styles/constants'
 
-export const Container = styled.button`
+export const PostCardLink = styled(Link)`
+  width: 100%;
+`
+
+export const Container = styled.section`
   padding: 16px;
   margin-bottom: 16px;
   border: 1.5px solid ${borderColor};
   background: transparent;
-  width: 100%;
 
   &:hover {
     border: 1.5px solid ${secondaryColor};
