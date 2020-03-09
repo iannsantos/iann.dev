@@ -5,8 +5,8 @@ module.exports = {
     author: `@iannsantos`,
     position: `Software Developer`,
     social: {
-      twitter: 'http://twitter.com/iannsantos',
-      instagram: 'http://instagram.com/iannsantos',
+      twitter: 'http://twitter.com/ianndev',
+      instagram: 'http://instagram.com/iann.dev',
       github: 'http://github.com/iannsantos',
       linkedin: 'http://linkedin.com/in/iannsantos',
     },
