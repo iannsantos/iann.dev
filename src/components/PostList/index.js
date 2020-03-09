@@ -3,28 +3,9 @@ import React from 'react'
 import PostCard from '../PostCard'
 import { Container } from './styles'
 
-export default function PostList({ latestPost = false }) {
-  let { posts, latestPosts } = useStaticQuery(graphql`
+export default function PostList() {
+  let { latestPosts } = useStaticQuery(graphql`
     query PostList {
-      posts: allMarkdownRemark(
-        sort: { fields: frontmatter___date, order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-              description
-              tags
-              title
-            }
-          }
-        }
-      }
-
       latestPosts: allMarkdownRemark(
         limit: 3
         sort: { fields: frontmatter___date, order: DESC }
@@ -47,7 +28,7 @@ export default function PostList({ latestPost = false }) {
     }
   `)
 
-  const postList = !latestPost ? posts.edges : latestPosts.edges
+  const postList = latestPosts.edges
 
   return (
     <Container>

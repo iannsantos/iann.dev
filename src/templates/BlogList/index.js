@@ -1,16 +1,26 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/Layout'
+import Pagination from '../../components/Pagination'
 import PostCard from '../../components/PostCard'
+import Search from '../../components/Search'
+import SEO from '../../components/seo'
 import { Container } from './styles'
 
 export default function BlogList(props) {
   const postList = props.data.allMarkdownRemark.edges
+  const { currentPage, numPages } = props.pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage =
+    currentPage - 1 === 1 ? '/blog' : `/blog/page/${currentPage - 1}`
+  const nextPage = `/blog/page/${currentPage + 1}`
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <Container>
-        <p>latest posts...</p>
+        <Search />
         {postList.map(
           ({
             node: {
@@ -30,6 +40,14 @@ export default function BlogList(props) {
           )
         )}
       </Container>
+      <Pagination
+        isFirst={isFirst}
+        isLast={isLast}
+        currentPage={currentPage}
+        numPages={numPages}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      />
     </Layout>
   )
 }

@@ -13,7 +13,7 @@ export default function IndexPage() {
       <Container>
         <Bio />
         <SocialLinks />
-        <PostList latestPost={true} />
+        <PostList />
       </Container>
     </Layout>
   )
