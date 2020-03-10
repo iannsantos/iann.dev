@@ -7,6 +7,7 @@ module.exports = {
     description: `My personal blog and portfolio.`,
     author: `@iannsantos`,
     position: `Software Developer`,
+    siteUrl: `https://iann.dev`,
     social: {
       twitter: 'http://twitter.com/ianndev',
       instagram: 'http://instagram.com/iann.dev',
@@ -95,15 +96,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Iann Santos`,
+        short_name: `Iann Santos`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#232129`,
+        theme_color: `#232129`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/assets/img/code.png`,
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
