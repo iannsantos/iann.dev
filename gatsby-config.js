@@ -13,6 +13,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/static/assets/img`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.
@@ -49,7 +56,25 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-remark`,
-      options: {},
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: `uploads`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-lazy-load`,
+          `gatsby-remark-prismjs`,
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
