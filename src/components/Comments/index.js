@@ -3,7 +3,7 @@ import ReactDisqusComments from 'react-disqus-comments'
 import { CommentsTitle, Container } from './styles'
 
 export default function Comments({ url, title }) {
-  const completeURL = `iann.dev/${url}`
+  const completeURL = `https://www.iann.dev/${url}`
   console.log(completeURL)
   return (
     <Container>
