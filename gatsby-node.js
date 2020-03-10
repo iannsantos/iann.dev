@@ -38,18 +38,38 @@ exports.createPages = ({ graphql, actions }) => {
               title
             }
           }
+          next {
+            frontmatter {
+              title
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+            }
+            fields {
+              slug
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+            }
+          }
         }
       }
     }
   `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
 
-    posts.forEach(({ node }) => {
+    posts.forEach(({ node, next, previous }) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve('./src/templates/BlogPost/index.js'),
         context: {
           slug: node.fields.slug,
+          previousPost: next,
+          nextPost: previous,
         },
       })
     })

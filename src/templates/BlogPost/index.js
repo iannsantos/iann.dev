@@ -1,11 +1,14 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/Layout'
+import RecommendedPosts from '../../components/RecommendedPosts'
 import SEO from '../../components/seo'
 import * as S from './styles'
 
-export default function BlogPost({ data }) {
+export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark
+  const next = pageContext.nextPost
+  const previous = pageContext.previousPost
 
   return (
     <Layout>
@@ -25,7 +28,7 @@ export default function BlogPost({ data }) {
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </S.MainContent>
-      {/* <RecommendedPosts next={next} previous={previous} /> */}
+      <RecommendedPosts next={next} previous={previous} />
       {/* <Comments url={post.fields.slug} title={post.frontmatter.title} /> */}
 
       {/* <h1>{post.frontmatter.title}</h1>
