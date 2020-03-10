@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import Comments from '../../components/Comments'
 import Layout from '../../components/Layout'
 import RecommendedPosts from '../../components/RecommendedPosts'
 import SEO from '../../components/seo'
@@ -29,7 +30,7 @@ export default function BlogPost({ data, pageContext }) {
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </S.MainContent>
       <RecommendedPosts next={next} previous={previous} />
-      {/* <Comments url={post.fields.slug} title={post.frontmatter.title} /> */}
+      <Comments url={post.fields.slug} title={post.frontmatter.title} />
 
       {/* <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }}></div> */}
