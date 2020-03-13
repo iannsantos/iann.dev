@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import styled from 'styled-components'
 import { secondaryColor } from '../../styles/constants'
 
@@ -10,7 +10,14 @@ export const Container = styled.nav`
 
   margin-bottom: 32px;
 `
-export const Logo = styled(Link)`
+export const Logo = styled(AniLink).attrs(props => {
+  return {
+    bg: '#232129',
+    direction: 'left',
+    duration: 0.6,
+    cover: true,
+  }
+})`
   font-family: 'Righteous';
   font-size: 30px;
   font-weight: bold;
@@ -25,10 +32,14 @@ export const Logo = styled(Link)`
   }
 `
 
-export const Button = styled(Link).attrs({
+export const Button = styled(AniLink).attrs({
   activeStyle: {
     color: secondaryColor,
   },
+  bg: '#232129',
+  direction: 'down',
+  duration: 0.6,
+  cover: true,
 })`
   font-family: 'Righteous';
   font-size: 18px;

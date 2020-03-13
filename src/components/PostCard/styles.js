@@ -1,8 +1,13 @@
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import styled from 'styled-components'
 import { borderColor, secondaryColor } from '../../styles/constants'
 
-export const PostCardLink = styled(Link)`
+export const PostCardLink = styled(AniLink).attrs({
+  bg: '#232129',
+  direction: 'right',
+  duration: 0.6,
+  cover: true,
+})`
   width: 100%;
 `
 

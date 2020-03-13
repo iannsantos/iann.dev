@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { borderColor, secondaryColor } from '../../styles/constants'
 
 // export const Container = styled.div`
 //   input {
@@ -10,9 +11,9 @@ import media from 'styled-media-query'
 //     font-size: 18px;
 //     color: #fff;
 
-//     @media screen and (max-width: 400px) {
-//       width: 100%;
-//     }
+// @media screen and (max-width: 400px) {
+//   width: 100%;
+// }
 //   }
 // `
 
@@ -30,16 +31,16 @@ export const Container = styled.section`
   }
   .ais-SearchBox,
   .ais-Stats {
-    padding: 0.5rem 3rem;
+    /* padding: 0.5rem 3rem;
     ${media.lessThan('large')`
       padding: 0.5rem 1rem;
-    `}
+    `} */
   }
   .ais-SearchBox {
-    padding-top: 6rem;
-    ${media.lessThan('large')`
+    /* padding-top: 6rem; */
+    /* ${media.lessThan('large')`
       padding-top: 1rem;
-    `}
+    `} */
   }
   .ais-Stats {
     color: var(--texts);
@@ -60,8 +61,19 @@ export const Container = styled.section`
     }
   }
   .ais-SearchBox-input {
-    background: none;
-    border: none;
+    border: 1.5px solid ${borderColor};
+    background: transparent;
+    margin-bottom: 16px;
+    padding: 8px;
+    font-size: 18px;
+    color: #fff;
+
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
+
+    /* background: none;
+    border: 1px solid ${secondaryColor};
     border-bottom: 1px solid var(--borders);
     color: var(--texts);
     display: flex;
@@ -70,7 +82,7 @@ export const Container = styled.section`
     width: 100%;
     &::placeholder {
       color: var(--texts);
-    }
+    } */
   }
   .ais-SearchBox-submit,
   .ais-SearchBox-reset {

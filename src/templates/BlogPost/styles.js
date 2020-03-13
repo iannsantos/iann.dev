@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { darken } from 'polished'
 import styled from 'styled-components'
 import media from 'styled-media-query'
@@ -116,11 +116,19 @@ export const MainContent = styled.section`
       /* padding: 0 1rem; */
     `}
   }
+
+  .gatsby-highlight {
+    @media screen and (max-width: 400px) {
+      max-width: 20rem;
+      margin: 3rem auto;
+    }
+  }
+
   blockquote {
     color: #fff;
-    border-left: 0.3rem solid ${secondaryColor};
+    /* border-left: 0.3rem solid ${secondaryColor}; */
     /* padding: 0 1.875rem; */
-    margin: 3.125rem auto;
+    /* margin: 3.125rem auto; */
   }
   hr {
     border: 1px solid var(--borders);
@@ -204,7 +212,12 @@ export const MainContent = styled.section`
     }
   }
 `
-export const BackButton = styled(Link)`
+export const BackButton = styled(AniLink).attrs({
+  bg: '#232129',
+  direction: 'left',
+  duration: 0.6,
+  cover: true,
+})`
   color: ${secondaryColor};
   font-size: 1rem;
 

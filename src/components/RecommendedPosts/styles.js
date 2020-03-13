@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { darken } from 'polished'
 import styled from 'styled-components'
 import { secondaryColor } from '../../styles/constants'
@@ -11,7 +11,14 @@ export const Container = styled.div`
   margin: 16px 0;
 `
 
-export const RecommendedLink = styled(Link)`
+export const RecommendedLink = styled(AniLink).attrs(props => {
+  return {
+    bg: '#232129',
+    direction: props.className === 'next' ? 'right' : 'left',
+    duration: 0.6,
+    cover: true,
+  }
+})`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -30,17 +37,19 @@ export const RecommendedLink = styled(Link)`
   &.previous {
     /* align-items: flex-start; */
     margin-right: 8px;
+    text-align: right;
   }
 
   &.next {
     /* align-items: flex-end; */
     margin-left: 8px;
+    text-align: left;
   }
 
   & > div {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     p {
       color: #c4c4c4;

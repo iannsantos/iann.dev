@@ -4,7 +4,7 @@ import { Container, PostCardLink, Tag } from './styles'
 
 export default function PostCard({ title, date, description, tags, slug }) {
   return (
-    <PostCardLink to={slug}>
+    <PostCardLink cover to={slug}>
       <Container>
         <div>
           <h1>{title || ''}</h1>

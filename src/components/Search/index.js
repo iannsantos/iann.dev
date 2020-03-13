@@ -1,6 +1,8 @@
 import algoliasearch from 'algoliasearch/lite'
 import React from 'react'
-import { InstantSearch } from 'react-instantsearch-dom'
+import FA from 'react-fontawesome'
+import { Hits, InstantSearch, SearchBox } from 'react-instantsearch-dom'
+import Hit from './Hit'
 import { Container } from './styles'
 
 const algolia = {
@@ -11,14 +13,20 @@ const algolia = {
 
 const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey)
 
-export default function Search() {
+export default function Search({ displayHits = false }) {
+  function changeDisplayHits(e) {
+    console.log(e)
+    displayHits = true
+  }
+
   return (
     <Container>
       <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-        {/* <SearchBox
-          autoFocus
+        <SearchBox
+          reset={<FA name="close" color="#fff" />}
+          onChange={changeDisplayHits}
           translations={{ placeholder: 'Procurar no blog...' }}
-        /> */}
+        />
         {/* <Stats
           translations={{
             stats(nbHits, _) {
@@ -26,7 +34,7 @@ export default function Search() {
             },
           }}
         /> */}
-        {/* <Hits hitComponent={Hit} /> */}
+        {displayHits && <Hits hitComponent={Hit} />}
       </InstantSearch>
     </Container>
 
