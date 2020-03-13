@@ -16,7 +16,6 @@ export default function BlogPost({ data, pageContext }) {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        image={post.frontmatter.image}
       />
       <S.BackButton to="/blog">◄ Voltar para a listagem</S.BackButton>
       <S.PostHeader>
@@ -48,7 +47,6 @@ export const query = graphql`
         title
         description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-        image
       }
       html
       timeToRead
