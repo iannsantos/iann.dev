@@ -32,7 +32,7 @@ export default function PostList() {
 
   return (
     <Container>
-      <p>latest posts...</p>
+      <p>últimos posts...</p>
       {postList.map(
         ({
           node: {
