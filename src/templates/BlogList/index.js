@@ -3,7 +3,6 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import Pagination from '../../components/Pagination'
 import PostCard from '../../components/PostCard'
-import Search from '../../components/Search'
 import SEO from '../../components/seo'
 import { Container } from './styles'
 
@@ -20,7 +19,7 @@ export default function BlogList(props) {
     <Layout>
       <SEO title="Blog" />
       <Container>
-        <Search />
+        {/* <Search /> */}
         {postList.map(
           ({
             node: {
