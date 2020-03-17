@@ -1,16 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import Icon from 'gatsby-image'
 import React from 'react'
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { Container } from './styles'
 
 export default function SocialLinks() {
-  const {
-    instagram,
-    github,
-    twitter,
-    linkedin,
-    links,
-  } = useStaticQuery(graphql`
+  const { links } = useStaticQuery(graphql`
     query {
       links: site {
         siteMetadata {
@@ -19,35 +13,6 @@ export default function SocialLinks() {
             instagram
             github
             linkedin
-          }
-        }
-      }
-
-      instagram: file(relativePath: { eq: "instagram.png" }) {
-        childImageSharp {
-          fixed(width: 20, height: 20) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      github: file(relativePath: { eq: "github.png" }) {
-        childImageSharp {
-          fixed(width: 20, height: 20) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      twitter: file(relativePath: { eq: "twitter.png" }) {
-        childImageSharp {
-          fixed(width: 20, height: 20) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      linkedin: file(relativePath: { eq: "linkedin.png" }) {
-        childImageSharp {
-          fixed(width: 20, height: 20) {
-            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -61,28 +26,28 @@ export default function SocialLinks() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon fixed={instagram.childImageSharp.fixed} alt="Instagram" />
+        <FaInstagram size={18} alt="Instagram" />
       </a>
       <a
         href={links.siteMetadata.social.github}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon fixed={github.childImageSharp.fixed} alt="Github" />
+        <FaGithub size={18} alt="Github" />
       </a>
       <a
         href={links.siteMetadata.social.twitter}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon fixed={twitter.childImageSharp.fixed} alt="Twitter" />
+        <FaTwitter size={18} alt="Twitter" />
       </a>
       <a
         href={links.siteMetadata.social.linkedin}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon fixed={linkedin.childImageSharp.fixed} alt="LinkedIn" />
+        <FaLinkedin size={18} alt="LinkedIn" />
       </a>
     </Container>
   )

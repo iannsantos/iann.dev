@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { secondaryColor } from '../../styles/constants'
 
 export const Container = styled.div`
   display: flex;
@@ -6,5 +7,13 @@ export const Container = styled.div`
 
   a {
     padding: 0 4px;
+
+    svg {
+      color: #fff;
+    }
+
+    svg:hover {
+      color: ${secondaryColor};
+    }
   }
 `
