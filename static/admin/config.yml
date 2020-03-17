@@ -3,8 +3,6 @@ backend:
   repo: iannsantos/iann.dev
   branch: master
   # site_domain: https://www.iann.dev/
-  # api_root: https://api.github.com
-  # base_url: https://api.netlify.com
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'

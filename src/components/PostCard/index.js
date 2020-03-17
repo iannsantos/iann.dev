@@ -1,5 +1,5 @@
 import React from 'react'
-import FA from 'react-fontawesome'
+import { FaTags } from 'react-icons/fa'
 import { Container, PostCardLink, Tag } from './styles'
 
 export default function PostCard({ title, date, description, tags, slug }) {
@@ -12,7 +12,7 @@ export default function PostCard({ title, date, description, tags, slug }) {
         </div>
         <p>{description || ''}</p>
         <Tag>
-          <FA name="tag" />
+          <FaTags color="#fff" />
           <p>{tags || ''}</p>
         </Tag>
       </Container>
