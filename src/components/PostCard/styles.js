@@ -51,7 +51,7 @@ export const Container = styled.section`
     text-align: left;
   }
 `
-export const Tag = styled.span`
+export const Tag = styled.a`
   display: flex;
   align-items: flex-end;
 
@@ -61,6 +61,10 @@ export const Tag = styled.span`
     color: #c2c2c2;
     font-size: 12px;
     margin: 0 8px;
+
+    & > a {
+      color: #c2c2c2;
+    }
   }
 
   & > span {
