@@ -23,6 +23,6 @@ collections:
           widget: 'datetime',
           format: 'YYYY-MM-DD hh:mm:ss',
         }
-      - { label: 'Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Image', name: 'thumbnail', widget: 'image', required: false }
       - { label: 'Tags', name: 'tags', widget: 'list', default: [] }
       - { label: 'Body', name: 'body', widget: 'markdown' }
