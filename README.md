@@ -1,20 +1,26 @@
 <h1 align="center">
-<a href="https://www.gatsbyjs.org">
-  <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="120" />
-</a>
+<img alt="Gatsby" src="static/assets/img/code.png" width="100" height="100" />
 <br>
-dev-iann
+iann.dev
 </h1>
 
-<p align="center">My personal blog and portfolio</p>
-
-<hr />
+<p align="center">My personal blog and portfolio made with Gatsby</p>
 
 ## About
 
-<p>This blog/portfolio isn't ready yet, the content is static and other issues.</p>
+<p>This initial blog/portfolio is ready, I'm improving code and design little by little</p>
 <p>Project in <strong>development</strong></p>
-<p>The demo is on a Netlify <a href="https://iannsantos.netlify.com//">here</a>.</p>
+<p>The project in production is <a href="https://iann.dev">here</a>, please, help me with new contents.</p>
+
+# How to contribute
+
+1. **Fork** the repo on GitHub
+2. **Clone** the project to your own machine
+3. **Commit** changes to your own branch
+4. **Push** your work back up to your fork
+5. Submit a **Pull request** so that we can review your changes
+
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 ## Features
 
