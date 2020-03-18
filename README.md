@@ -1,7 +1,7 @@
 <h1 align="center">
 <img alt="Gatsby" src="static/assets/img/code.png" width="100" height="100" />
 <br>
-dev-iann
+iann.dev
 </h1>
 
 <p align="center">My personal blog and portfolio made with Gatsby</p>
