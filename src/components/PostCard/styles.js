@@ -16,6 +16,7 @@ export const Container = styled.section`
   margin-bottom: 16px;
   border: 1.5px solid ${borderColor};
   background: transparent;
+  border-radius: 16px;
 
   &:hover {
     border: 1.5px solid ${secondaryColor};

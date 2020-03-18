@@ -71,7 +71,7 @@ export default function ProjectsPage() {
       id: 4,
       title: 'Calculadora',
       description:
-        'Uma calculadora simples, feita com Flutter, afim de aprendizado.',
+        'Uma calculadora simples, feita com Flutter, a fim de aprendizado.',
       link: 'https://github.com/iannsantos/calculator-flutter',
       image: calculator.childImageSharp.fixed,
     },
