@@ -64,7 +64,7 @@ export default function ProjectsPage() {
       title: 'Starred Repositories',
       description:
         'Um app feito em React Native para listar os repositórios que o usuário deu estrela.',
-      link: 'https://github.com/iannsantos/megahack-shawee-flutter',
+      link: 'https://github.com/iannsantos/rocketseat-starred-repositories',
       image: star.childImageSharp.fixed,
     },
     {
