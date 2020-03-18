@@ -14,7 +14,7 @@ dev-iann
 
 <p>This blog/portfolio isn't ready yet, the content is static and other issues.</p>
 <p>Project in <strong>development</strong></p>
-<p>The demo is on a Netlify <a href="https://iannsantos.netlify.com//">here</a>.</p>
+<p>The demo is on a Netlify <a href="https://iann.dev//">here</a>.</p>
 
 ## Features
 
