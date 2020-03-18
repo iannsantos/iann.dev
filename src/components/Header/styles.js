@@ -47,6 +47,10 @@ export const Button = styled(AniLink).attrs({
   color: #fff;
   margin-left: 16px;
 
+  &:hover {
+    color: ${secondaryColor};
+  }
+
   @media screen and (max-width: 800px) {
     font-size: 20px;
   }
