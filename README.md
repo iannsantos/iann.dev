@@ -6,8 +6,6 @@ dev-iann
 
 <p align="center">My personal blog and portfolio made with Gatsby</p>
 
-<hr />
-
 ## About
 
 <p>This initial blog/portfolio is ready, I'm improving code and design little by little</p>
