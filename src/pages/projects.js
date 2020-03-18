@@ -6,12 +6,36 @@ import Project from '../components/Project'
 import SEO from '../components/seo'
 
 export default function ProjectsPage() {
-  const { blogImage } = useStaticQuery(graphql`
+  const { blogImage, investSchool, star, calculator } = useStaticQuery(graphql`
     query {
       blogImage: file(relativePath: { eq: "code.png" }) {
         childImageSharp {
-          fluid(maxWidth: 150, maxHeight: 120) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 120, height: 120) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+
+      investSchool: file(relativePath: { eq: "invest-school.png" }) {
+        childImageSharp {
+          fixed(width: 150, height: 120) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+
+      star: file(relativePath: { eq: "star.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 120) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+
+      calculator: file(relativePath: { eq: "calculator.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 120) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -25,28 +49,32 @@ export default function ProjectsPage() {
       description:
         'Meu blog pessoal e portifólio, ou como eu o chamo, blogfólio!!',
       link: 'https://github.com/iannsantos/iann.dev',
-      image: blogImage.childImageSharp.fluid,
+      image: blogImage.childImageSharp.fixed,
     },
     {
       id: 2,
-      title: 'Meu blog/portifólio',
+      title: 'InvestSchool',
       description:
-        'Meu blog pessoal e portifólio, ou como eu o chamo, blogfólio!!',
-      link: 'https://github.com/iannsantos/iann.dev',
-      image: blogImage.childImageSharp.fluid,
+        'Este foi um app (MVP) para o MegaHack da Shawee, feito com Flutter, para tentar passar a idéia que tivemos sobre o desafio da XP Investimentos.',
+      link: 'https://github.com/iannsantos/megahack-shawee-flutter',
+      image: investSchool.childImageSharp.fixed,
     },
-    // {
-    //   title: 'My blog/portfolio',
-    //   description: 'This blog and a good description',
-    // },
-    // {
-    //   title: 'My blog/portfolio',
-    //   description: 'This blog and a good description',
-    // },
-    // {
-    //   title: 'My blog/portfolio',
-    //   description: 'This blog and a good description',
-    // },
+    {
+      id: 3,
+      title: 'Starred Repositories',
+      description:
+        'Um app feito em React Native para listar os repositórios que o usuário deu estrela.',
+      link: 'https://github.com/iannsantos/megahack-shawee-flutter',
+      image: star.childImageSharp.fixed,
+    },
+    {
+      id: 4,
+      title: 'Calculadora',
+      description:
+        'Uma calculadora simples, feita com Flutter, afim de aprendizado.',
+      link: 'https://github.com/iannsantos/calculator-flutter',
+      image: calculator.childImageSharp.fixed,
+    },
   ]
 
   return (
@@ -69,7 +97,7 @@ export default function ProjectsPage() {
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 50%);
   grid-gap: 16px;
 
   @media screen and (max-width: 500px) {

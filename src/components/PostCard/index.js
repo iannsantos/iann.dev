@@ -15,7 +15,7 @@ export default function PostCard({ title, date, description, tags, slug }) {
           <FaTags color="#fff" />
           <p>
             {tags.map((tag, index) => (
-              <a href="">
+              <a>
                 {tag}
                 {index !== tags.length - 1 ? ', ' : ''}
               </a>

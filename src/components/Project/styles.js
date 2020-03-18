@@ -1,4 +1,3 @@
-import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { borderColor, secondaryColor } from '../../styles/constants'
 
@@ -9,6 +8,7 @@ export const Container = styled.a`
   padding: 16px;
   border: 1.5px solid ${borderColor};
   background: transparent;
+  border-radius: 16px;
 
   &:hover {
     border: 1.5px solid ${secondaryColor};
@@ -24,10 +24,14 @@ export const Container = styled.a`
   p {
     color: #c4c4c4;
   }
-`
 
-export const Image = styled(Img)`
-  width: 150px;
-  height: 120px;
-  background: #333;
+  & > div {
+    width: 150px;
+    height: 120px;
+    background: #333;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `
