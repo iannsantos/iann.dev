@@ -3,7 +3,7 @@ title: Quais foram os ingredientes da receita desse blog?
 description: >-
   Brincadeiras a parte, descubra quais foram as tecnologias, pacotes, plugins e
   etc.. usadas para montar esse super blog!
-date: '2020-03-19 09:42:59'
+date: '2020-03-20 07:30:59'
 tags:
   - gatsby
   - react
