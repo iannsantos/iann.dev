@@ -24,13 +24,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: `#D9BAE8`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
