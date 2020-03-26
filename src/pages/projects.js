@@ -6,7 +6,13 @@ import Project from '../components/Project'
 import SEO from '../components/seo'
 
 export default function ProjectsPage() {
-  const { blogImage, investSchool, star, calculator } = useStaticQuery(graphql`
+  const {
+    blogImage,
+    investSchool,
+    star,
+    calculator,
+    whichcar,
+  } = useStaticQuery(graphql`
     query {
       blogImage: file(relativePath: { eq: "code.png" }) {
         childImageSharp {
@@ -33,6 +39,14 @@ export default function ProjectsPage() {
       }
 
       calculator: file(relativePath: { eq: "calculator.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 120) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+
+      whichcar: file(relativePath: { eq: "car_white.png" }) {
         childImageSharp {
           fixed(width: 120, height: 120) {
             ...GatsbyImageSharpFixed
@@ -69,7 +83,15 @@ export default function ProjectsPage() {
     },
     {
       id: 4,
-      title: 'Calculadora',
+      title: 'WhichCar?',
+      description:
+        'Um aplicativo para descobrir informações sobre algum carro.',
+      link: 'https://github.com/iannsantos/which-car-mobile',
+      image: whichcar.childImageSharp.fixed,
+    },
+    {
+      id: 5,
+      title: 'Calculator',
       description:
         'Uma calculadora simples, feita com Flutter, a fim de aprendizado.',
       link: 'https://github.com/iannsantos/calculator-flutter',
