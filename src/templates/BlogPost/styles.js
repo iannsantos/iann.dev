@@ -118,10 +118,18 @@ export const MainContent = styled.section`
   }
 
   .gatsby-highlight {
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 800px) {
+      max-width: 30rem;
+      margin: 1rem auto;
+    }
+
+    @media screen and (max-width: 500px) {
       max-width: 20rem;
       margin: 3rem auto;
     }
+
+
+
   }
 
   blockquote {
@@ -189,12 +197,6 @@ export const MainContent = styled.section`
       opacity: 1;
       z-index: 3;
     }
-  }
-  .gatsby-highlight {
-    /* padding: 0 1.6rem 1.6rem; */
-    ${media.lessThan('large')`
-      /* padding: 0; */
-    `}
   }
   .instagram-media {
     margin: 1rem auto !important;
